@@ -6,6 +6,7 @@ import 'package:quiz_1_application/screens/akademik.dart';
 import 'package:quiz_1_application/screens/keuangan.dart';
 import 'package:quiz_1_application/screens/medsos.dart';
 import 'package:quiz_1_application/screens/elearning.dart';
+import 'package:quiz_1_application/screens/notifikasi.dart';
 import 'package:quiz_1_application/screens/pesan.dart';
 
 void main() {
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/elearning': (context) => const ElearningScreen(),
         '/jadwaltodo': (context) => const ScheduleTodoScreen(),
         '/pesan': (context) => ChatScreen(),
+        '/notifikasi': (context) => const NotificationScreen(),
       },
     );
   }
@@ -52,7 +54,11 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      appBar: AppBar(title: const Text('Quiz 1 Provis'), centerTitle: true, backgroundColor: Colors.blue,),
+      appBar: AppBar(
+        title: const Text('Quiz 1 Provis'),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -155,7 +161,9 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/notifikasi');
+                },
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(400, 70),
                 ),
