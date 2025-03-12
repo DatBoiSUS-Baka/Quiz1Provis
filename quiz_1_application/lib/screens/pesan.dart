@@ -5,12 +5,11 @@ void main() {
 }
 
 class ChatApp extends StatelessWidget {
+  const ChatApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ChatScreen(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: ChatScreen());
   }
 }
 
@@ -23,6 +22,8 @@ class ChatScreen extends StatelessWidget {
     {"name": "Dosen D", "message": "Halo permisi ibu"},
     {"name": "Dosen B", "message": "Assalamualaikum pak"},
   ];
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -74,11 +75,23 @@ class ChatScreen extends StatelessWidget {
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.sentiment_satisfied), label: "Medsos"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.sentiment_satisfied),
+            label: "Medsos",
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.school), label: "Elearning"),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: "Jadwal & Todo"),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Pesan & Group"),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: "Notifikasi"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_today),
+            label: "Jadwal & Todo",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: "Pesan & Group",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: "Notifikasi",
+          ),
         ],
       ),
     );
@@ -89,7 +102,7 @@ class ChatTile extends StatelessWidget {
   final String name;
   final String message;
 
-  ChatTile({required this.name, required this.message});
+  const ChatTile({required this.name, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -115,10 +128,7 @@ class ChatTile extends StatelessWidget {
                   name,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
-                Text(
-                  message,
-                  style: TextStyle(color: Colors.grey.shade600),
-                ),
+                Text(message, style: TextStyle(color: Colors.grey.shade600)),
               ],
             ),
           ],
