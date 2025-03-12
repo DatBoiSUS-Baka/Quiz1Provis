@@ -5,6 +5,8 @@ void main() {
 }
 
 class ElearningApp extends StatelessWidget {
+  const ElearningApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,6 +17,8 @@ class ElearningApp extends StatelessWidget {
 }
 
 class ElearningScreen extends StatelessWidget {
+  const ElearningScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,17 +42,29 @@ class ElearningScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 1, // Menandai Elearning sebagai halaman aktif
-        selectedItemColor: Colors.cyan.shade800,
+        selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         backgroundColor: Colors.white,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.sentiment_satisfied), label: "Medsos"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.sentiment_satisfied),
+            label: "Medsos",
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.school), label: "Elearning"),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: "Jadwal & Todo"),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Pesan & Group"),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: "Notifikasi"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_today),
+            label: "Jadwal & Todo",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: "Pesan & Group",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: "Notifikasi",
+          ),
         ],
       ),
     );
@@ -56,8 +72,12 @@ class ElearningScreen extends StatelessWidget {
 
   Widget courseCard(int index) {
     List<String> titles = [
-      "Pemrograman Visual", "Big Data Platform", "Proyek Konsultasi",
-      "Sistem Operasi", "Metodologi Penelitian", "Analisis Data"
+      "Pemrograman Visual",
+      "Big Data Platform",
+      "Proyek Konsultasi",
+      "Sistem Operasi",
+      "Metodologi Penelitian",
+      "Analisis Data",
     ];
     return Container(
       decoration: BoxDecoration(
@@ -78,7 +98,9 @@ class ElearningScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.all(8.0),
-            child: Text("Mata Kuliah ini memiliki tugas yang harus dikerjakan."),
+            child: Text(
+              "Mata Kuliah ini memiliki tugas yang harus dikerjakan.",
+            ),
           ),
         ],
       ),
