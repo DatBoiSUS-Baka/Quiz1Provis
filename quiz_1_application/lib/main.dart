@@ -64,6 +64,8 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              Padding(padding: EdgeInsets.only(top: 10, bottom: 10),
+              child: Text("Kelompok 16\n- Kasyful Haq B. (2304820)\n- Muhammad Naufal Arbanin(2310850)"),),
               Padding(
                 padding: EdgeInsets.only(bottom: 10),
                 child: ElevatedButton(
