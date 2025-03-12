@@ -190,14 +190,19 @@ class _MainScreenState extends State<MainScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: 
-      [
-        BottomNavigationBarItem(icon: Image.asset('Medsos_Icon.png', width: 50, height: 50,), label: 'Medsos'),
-        BottomNavigationBarItem(icon: Image.asset('Elearning_Icon.png', width: 50, height: 50,), label: 'Elearning'),
-        BottomNavigationBarItem(icon: Image.asset('Jadwal_Dan_Todo_Icon.png', width: 50, height: 50,), label: 'Jadwal & Todo'),
-        BottomNavigationBarItem(icon: Image.asset('Pesan_Dan_Group_Icon.png', width: 50, height: 50,), label: 'Pesan & Grup'),
-        BottomNavigationBarItem(icon: Image.asset('Notifikasi_Icon.png', width: 50, height: 50,), label: 'Notifikasi')
-      ]),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black,
+        showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
+        items: 
+        [
+          BottomNavigationBarItem(icon: Image.asset('Medsos_Icon.png', width: 50, height: 50,), label: 'Medsos'),
+          BottomNavigationBarItem(icon: Image.asset('Elearning_Icon.png', width: 50, height: 50,), label: 'Elearning'),
+          BottomNavigationBarItem(icon: Image.asset('Jadwal_Dan_Todo_Icon.png', width: 50, height: 50,), label: 'Jadwal & Todo'),
+          BottomNavigationBarItem(icon: Image.asset('Pesan_Dan_Group_Icon.png', width: 50, height: 50,), label: 'Pesan & Grup'),
+          BottomNavigationBarItem(icon: Image.asset('Notifikasi_Icon.png', width: 50, height: 50,), label: 'Notifikasi')
+        ]),
     );
   }
 }

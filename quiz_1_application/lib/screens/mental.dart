@@ -5,6 +5,8 @@ void main() {
 }
 
 class MentalHealthApp extends StatelessWidget {
+  const MentalHealthApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,9 +17,12 @@ class MentalHealthApp extends StatelessWidget {
 }
 
 class MentalHealthScreen extends StatelessWidget {
+  const MentalHealthScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       backgroundColor: const Color.fromARGB(255, 212, 137, 255),
       body: SingleChildScrollView(
         child: Column(
@@ -26,7 +31,11 @@ class MentalHealthScreen extends StatelessWidget {
             SizedBox(height: 40),
             Text(
               "Mental Health",
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
             Text(
               "A Mental Health Support\nTailored for Students",
@@ -56,7 +65,7 @@ class MentalHealthScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerRight,
                     child: Icon(Icons.arrow_forward, size: 24),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -105,14 +114,33 @@ class MentalHealthScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              selectedItemColor: Colors.black,
+              unselectedItemColor: Colors.black,
+              showUnselectedLabels: true,
               items: [
-                BottomNavigationBarItem(icon: Icon(Icons.sentiment_satisfied), label: "Medsos"),
-                BottomNavigationBarItem(icon: Icon(Icons.school), label: "Elearning"),
-                BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: "Jadwal & Todo"),
-                BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Pesan & Group"),
-                BottomNavigationBarItem(icon: Icon(Icons.notifications), label: "Notifikasi"),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.sentiment_satisfied, color: Colors.black,),
+                  label: "Medsos",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.school, color: Colors.black,),
+                  label: "Elearning",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.calendar_today, color: Colors.black,),
+                  label: "Jadwal & Todo",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.chat, color: Colors.black,),
+                  label: "Pesan & Group",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.notifications, color: Colors.black,),
+                  label: "Notifikasi",
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
