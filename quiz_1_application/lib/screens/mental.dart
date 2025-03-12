@@ -23,7 +23,7 @@ class MentalHealthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       
-      backgroundColor: const Color.fromARGB(255, 212, 137, 255),
+      backgroundColor: Colors.blue.shade200,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,13 +34,13 @@ class MentalHealthScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
             Text(
               "A Mental Health Support\nTailored for Students",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18, color: Colors.white),
+              style: TextStyle(fontSize: 18, color: Colors.black),
             ),
             SizedBox(height: 20),
             Container(

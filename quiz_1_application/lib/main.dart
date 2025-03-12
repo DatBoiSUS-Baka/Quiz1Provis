@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz_1_application/screens/main_screen.dart';
 import 'package:quiz_1_application/screens/mental.dart';
 import 'package:quiz_1_application/screens/akademik.dart';
+import 'package:quiz_1_application/screens/keuangan.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/main': (context) => const MainScreen(),
         '/mental': (context) => const MentalHealthScreen(),
         '/akademik': (context) => const AkademikScreen(),
+        '/keuangan': (context) => const FinancialScreen(),
       },
     );
   }
@@ -86,7 +88,9 @@ class MyHomePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(bottom: 10),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/keuangan');
+                  },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(400, 70),
                   ),
