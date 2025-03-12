@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_1_application/screens/main_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -35,53 +36,105 @@ class MyHomePage extends StatelessWidget {
   final Color color;
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Quiz 1 Provis'),
-        centerTitle: true,),
+      appBar: AppBar(title: const Text('Quiz 1 Provis'), centerTitle: true),
       body: SingleChildScrollView(
-        child: Center(child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Padding(padding: EdgeInsets.only(bottom: 10),
-            child: ElevatedButton(onPressed: () {},
-            style: ElevatedButton.styleFrom(minimumSize: const Size(400, 70)),
-            child: const Text("Main Screen")),
-            ),
-            Padding(padding: EdgeInsets.only(bottom: 10),
-            child: ElevatedButton(onPressed: () {},
-            style: ElevatedButton.styleFrom(minimumSize: const Size(400, 70)),
-            child: const Text("Mental Health Screen")),),
-            Padding(padding: EdgeInsets.only(bottom: 10),
-            child: ElevatedButton(onPressed: () {}, 
-            style: ElevatedButton.styleFrom(minimumSize: const Size(400, 70)),
-            child: const Text("Akademik Screen")),),
-            Padding(padding: EdgeInsets.only(bottom: 10),
-            child: ElevatedButton(onPressed: () {}, 
-            style: ElevatedButton.styleFrom(minimumSize: const Size(400, 70)),
-            child: const Text("Keuangan Screen")),),
-            Padding(padding: EdgeInsets.only(bottom: 10),
-            child: ElevatedButton(onPressed: () {}, 
-            style: ElevatedButton.styleFrom(minimumSize: const Size(400, 70)),
-            child: const Text("Medsos Screen")),),
-            Padding(padding: EdgeInsets.only(bottom: 10),
-            child: ElevatedButton(onPressed: () {}, 
-            style: ElevatedButton.styleFrom(minimumSize: const Size(400, 70)),
-            child: const Text("E-Learning Screen")),),
-            Padding(padding: EdgeInsets.only(bottom: 10),
-            child: ElevatedButton(onPressed: () {}, 
-            style: ElevatedButton.styleFrom(minimumSize: const Size(400, 70)),
-            child: const Text("Jadwal & Todo Screen")),),
-            Padding(padding: EdgeInsets.only(bottom: 10),
-            child: ElevatedButton(onPressed: () {}, 
-            style: ElevatedButton.styleFrom(minimumSize: const Size(400, 70)),
-            child: const Text("Pesan & Group Screen")),),
-            ElevatedButton(onPressed: () {},
-            style: ElevatedButton.styleFrom(minimumSize: const Size(400, 70)),
-            child: const Text("Notifikasi Screen")),
-          ],
-        ),)
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/main');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 70),
+                  ),
+                  child: const Text("Main Screen"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 70),
+                  ),
+                  child: const Text("Mental Health Screen"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 70),
+                  ),
+                  child: const Text("Akademik Screen"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 70),
+                  ),
+                  child: const Text("Keuangan Screen"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 70),
+                  ),
+                  child: const Text("Medsos Screen"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 70),
+                  ),
+                  child: const Text("E-Learning Screen"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 70),
+                  ),
+                  child: const Text("Jadwal & Todo Screen"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(400, 70),
+                  ),
+                  child: const Text("Pesan & Group Screen"),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(400, 70),
+                ),
+                child: const Text("Notifikasi Screen"),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
