@@ -115,8 +115,8 @@ class MentalHealthScreen extends StatelessWidget {
             SizedBox(height: 20),
             BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
-              selectedItemColor: Colors.black,
-              unselectedItemColor: Colors.black,
+              selectedItemColor: Colors.blue,
+              unselectedItemColor: Colors.grey,
               showUnselectedLabels: true,
               items: [
                 BottomNavigationBarItem(

@@ -3,6 +3,7 @@ import 'package:quiz_1_application/screens/main_screen.dart';
 import 'package:quiz_1_application/screens/mental.dart';
 import 'package:quiz_1_application/screens/akademik.dart';
 import 'package:quiz_1_application/screens/keuangan.dart';
+import 'package:quiz_1_application/screens/medsos.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/mental': (context) => const MentalHealthScreen(),
         '/akademik': (context) => const AkademikScreen(),
         '/keuangan': (context) => const FinancialScreen(),
+        '/medsos': (context) => const SocialMediaScreen(),
       },
     );
   }
@@ -100,7 +102,9 @@ class MyHomePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(bottom: 10),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/medsos');
+                  },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(400, 70),
                   ),
@@ -110,7 +114,9 @@ class MyHomePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(bottom: 10),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/elearning');
+                  },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(400, 70),
                   ),
